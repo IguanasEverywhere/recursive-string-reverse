@@ -1,5 +1,12 @@
 function reverseString(str) {
-  // type your code here
+  if (str.length < 2) {
+    return str;
+  }
+
+  let strWithoutFirst = str.slice(1);
+  return reverseString(strWithoutFirst) + str[0];
+
+
 }
 
 if (require.main === module) {
